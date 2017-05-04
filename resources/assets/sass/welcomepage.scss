@@ -1,0 +1,131 @@
+* {
+  font-family: "Raleway",sans-serif;
+}
+
+@mixin font12 {
+  font-size: 12px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  padding-top: 0;
+  margin-top: 0;
+}
+
+body {
+  background-color: #edeef0 ;
+}
+
+nav {
+  background-color: #2b2c2d;
+  padding: 0 .75rem;
+
+  .brand-logo {
+    position: relative;
+
+    &:after, &:before {
+      content: '';
+      background-color: #1b5e20 ;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      left: 0;
+    }
+
+    &:after {
+      transform: skew(-62deg);
+    }
+
+    &:before {
+      transform: skew(20deg);
+    }
+
+    i {
+      z-index: 1;
+      position: relative;
+      padding: 0 15px;
+    }
+  }
+
+  ul a {
+    font-weight: normal;
+    text-transform: capitalize;
+
+    &.hover:hover {
+      opacity: 1;
+      background-color: inherit;
+    }
+
+    &.hover {
+      opacity: .2;
+    }
+  }
+}
+
+.row.content {
+
+  margin-top: 15px;
+
+  header {
+    border-bottom: 1px solid #ddd;
+  }
+
+  .left-col, .mid-col, .right-col {
+    padding: 25px 25px 20px;
+    background-color: #ffffff;
+  }
+
+  .left-col {
+    li {
+      position: relative;
+      i {
+        position: relative;
+        top: 2px;
+      }
+    }
+  }
+
+  .right-col {
+    table {
+      &.responsive-table {
+        display: block;
+
+        td, th {
+          padding: 8px;
+        }
+
+        thead {
+          float: left;
+          border-width: 0 1px 0 0;
+          border-color: #d0d0d0;
+          border-style: solid;
+
+          th {
+            display: block;
+          }
+        }
+
+        tbody {
+          display: block;
+          width: auto;
+          position: relative;
+          overflow-x: auto;
+          white-space: nowrap;
+
+          tr {
+            display: inline-block;
+
+            td {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .row .col {
+    padding: .75rem;
+  }
+}
